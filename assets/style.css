@@ -283,6 +283,16 @@ img[src$="nina.png"] {
   object-fit: cover; /* évite les déformations dans la grille */
 }
 
+.picture.right img {
+  aspect-ratio: 4 / 3; /* réserve le ratio dès le chargement */
+  width: 100%; /* responsive */
+  max-width: 500px; /* limite la taille max pour éviter qu’elle gonfle */
+  height: auto;
+  display: block;
+  object-fit: cover; /* coupe proprement si besoin */
+  margin-left: auto; /* centre à droite */
+}
+
 @media all and (max-width: 1180px) {
   .picture {
     flex: 2;
