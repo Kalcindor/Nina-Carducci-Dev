@@ -40,6 +40,9 @@ body {
 
 .social-link img {
   width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
 }
 
 #about {
@@ -89,9 +92,25 @@ body {
   font-size: 14px;
 }
 
-#gallery {
-  /*	min-height: 100vh; */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(304px, 1fr));
+  gap: 1em;
 }
+
+.gallery-item {
+  width: 100%;
+  max-width: 304px;
+  aspect-ratio: 3 / 2;
+  display: block;
+  margin: 0 auto;
+}
+
+.d-block.w-100 {
+  aspect-ratio: 1600 / 740;
+  object-fit: cover;
+}
+
 .title {
   text-align: center;
   padding-block: 2em;
@@ -239,54 +258,6 @@ form textarea {
 input[type="submit"] {
   background-color: #beb45a;
   padding: 0.5em 1em;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-#header .carousel-item {
-  position: relative;
-  aspect-ratio: 16/9;
-}
-#header .carousel-item img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.social-link img {
-  width: 24px;
-  height: 24px;
-}
-
-#about .picture img,
-img[src$="nina.png"] {
-  aspect-ratio: 1 / 1;
-  width: min(100%, 600px);
-  height: auto;
-  object-fit: cover;
-}
-
-.gallery .gallery-item {
-  aspect-ratio: 3 / 2;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.picture.right img {
-  aspect-ratio: 4 / 3;
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  margin-left: auto;
 }
 
 @media all and (max-width: 1180px) {
