@@ -1,3 +1,6 @@
+html {
+  font-display: swap;
+}
 body {
   max-width: 1920px;
   margin: auto;
@@ -102,6 +105,14 @@ body {
 
 .d-block.w-100 {
   aspect-ratio: 1600 / 740;
+  object-fit: cover;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
   object-fit: cover;
 }
 
